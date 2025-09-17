@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paquetes Deportivos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 20px;
+      background: #f4f6f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #222;
+      margin-bottom: 30px;
+    }
+    .paquete {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 750px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .paquete:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    }
+    .paquete h2 {
+      margin-top: 0;
+      color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .futbol h2 { background: #28a745; }
+    .voleibol h2 { background: #ff7f0e; }
+    .baloncesto h2 { background: #007bff; }
+    .precio {
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    .futbol .precio { color: #28a745; }
+    .voleibol .precio { color: #ff7f0e; }
+    .baloncesto .precio { color: #007bff; }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    strong {
+      color: #444;
+    }
+    /* Botones */
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    .futbol .btn { background: #28a745; }
+    .futbol .btn:hover { background: #218838; }
+    .voleibol .btn { background: #ff7f0e; }
+    .voleibol .btn:hover { background: #e06900; }
+    .baloncesto .btn { background: #007bff; }
+    .baloncesto .btn:hover { background: #0056b3; }
+
+    /* Formulario */
+    .formulario {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 40px auto;
+      max-width: 600px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    }
+    .formulario h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    .enviar {
+      background: #007bff;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .enviar:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>🏆 Paquetes Deportivos</h1>
+
+  <div class="paquete futbol">
+    <h2>⚽ Paquete Fútbol</h2>
+    <p><strong>Duración:</strong> 3 semanas – 2 sesiones por semana (90 min).</p>
+    <p><strong>Innovaciones:</strong></p>
+    <ul>
+      <li>Entrenamiento con sensores de impacto en el balón para medir potencia de tiro.</li>
+      <li>Retos semanales tipo (tiros libres, dominadas, goles acrobáticos).</li>
+    </ul>
+    <p><strong>Incluye:</strong></p>
+    <ul>
+      <li>Entrenamiento técnico y físico.</li>
+      <li>Retos con ranking entre los participantes.</li>
+      <li>Torneo final relámpago con narración en vivo y música.</li>
+      <li>Camiseta personalizada.</li>
+    </ul>
+    <p class="precio">💲 Precio: 900.000</p>
+    <a href="#formulario" class="btn">Inscribirme</a>
+  </div>
+
+  <div class="paquete voleibol">
+    <h2>🏐 Paquete Voleibol</h2>
+    <p><strong>Duración:</strong> 2 semanas – 2 sesiones por semana (2 horas).</p>
+    <p><strong>Innovaciones:</strong></p>
+    <ul>
+      <li>Partido nocturno con luces LED en redes y balones fluorescentes.</li>
+      <li>Dinámicas con gafas de visión distorsionada para mejorar concentración y reacción.</li>
+      <li>Juego de integración con música (cada punto cambia la regla).</li>
+    </ul>
+    <p><strong>Incluye:</strong></p>
+    <ul>
+      <li>Entrenamiento básico-intermedio.</li>
+      <li>Torneo relámpago en equipos mixtos.</li>
+      <li>Sesión de relajación y recuperación con música en vivo.</li>
+    </ul>
+    <p class="precio">💲 Precio: 1'000.000</p>
+    <a href="#formulario" class="btn">Inscribirme</a>
+  </div>
+
+  <div class="paquete baloncesto">
+    <h2>🏀 Paquete Baloncesto</h2>
+    <p><strong>Duración:</strong> 4 semanas – 2 sesiones por semana (2 horas).</p>
+    <p><strong>Innovaciones:</strong></p>
+    <ul>
+      <li>Competencias estilo “NBA”.</li>
+      <li>Entrenamientos urbanos en canchas abiertas con música hip-hop/DJ en vivo.</li>
+    </ul>
+    <p><strong>Incluye:</strong></p>
+    <ul>
+      <li>Entrenamiento físico y técnico acelerado.</li>
+      <li>Dinámicas de freestyle basketball.</li>
+      <li>Torneo final con premiación.</li>
+    </ul>
+    <p class="precio">💲 Precio: 1'200.000</p>
+    <a href="#formulario" class="btn">Inscribirme</a>
+  </div>
+
+  <!-- Formulario de inscripción -->
+  <div id="formulario" class="formulario">
+    <h2>📝 Formulario de Inscripción</h2>
+    <form onsubmit="enviarWhatsApp(event)">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label for="paquete">Selecciona tu paquete:</label>
+      <select id="paquete" name="paquete" required>
+        <option value="">-- Elige una opción --</option>
+        <option value="Fútbol">⚽ Fútbol</option>
+        <option value="Voleibol">🏐 Voleibol</option>
+        <option value="Baloncesto">🏀 Baloncesto</option>
+      </select>
+
+      <label for="mensaje">Mensaje adicional (opcional):</label>
+      <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+      <button type="submit" class="enviar">Enviar Inscripción</button>
+    </form>
+  </div>
+
+  <script>
+    function enviarWhatsApp(event) {
+      event.preventDefault();
+      let nombre = document.getElementById("nombre").value;
+      let email = document.getElementById("email").value;
+      let telefono = document.getElementById("telefono").value;
+      let paquete = document.getElementById("paquete").value;
+      let mensaje = document.getElementById("mensaje").value;
+
+      let numeroWhatsApp = "573213322115
+    ; // 🔴 REEMPLAZA con tu número en formato internacional
+
+      let texto = `Hola, me quiero inscribir en el paquete de ${paquete}.%0A
+      👤 Nombre: ${nombre}%0A
+      📧 Email: ${email}%0A
+      📞 Teléfono: ${telefono}%0A
+      📝 Mensaje: ${mensaje}`;
+
+      let url = https://wa.me/${numeroWhatsApp}?text=${texto};
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
